@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useState , useEffect } from "react"
 import { TablaLibros } from "./componentes/TablaLibros";
-import { getLibrosPorCategoria } from "./Peticiones/getLibrosPorCateoria";
+import { getLibrosPorCategoria } from "./Peticiones/getLibrosPorCategoria";
+import { getLibros } from "./Peticiones/getLibros";
 
 
 export const BibliotecaApp = () => {
@@ -14,6 +15,15 @@ export const BibliotecaApp = () => {
             setLibros(librosPorCategoria);
         }
     }; 
+    
+    const cargueLibros= async () => {
+      const datos = await getLibros();
+      setLibros(datos);
+    }
+
+    useEffect(()=>{
+      cargueLibros();
+    },[])
 
     return (
     <>

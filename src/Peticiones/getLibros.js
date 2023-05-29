@@ -1,4 +1,3 @@
-
 export const getLibros = async () => {
 
     const url = 'http://localhost:8081/libreria/todos'
@@ -9,7 +8,7 @@ export const getLibros = async () => {
         titulo: libro.titulo,
         autor: libro.autor,
         categoria: libro.categoria,
-        disponibilidad: libro.disponibilidad
+        disponible: libro.disponible
     }));
     return listaLibros;
 

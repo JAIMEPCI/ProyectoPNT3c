@@ -1,6 +1,6 @@
 export const getLibrosPorCategoria = async (categoria, cantidadLibros) => {
 
-    const url = `http://localhost:8081/estudiantes/filtro?categoria=${categoria}&cantidadLibros=${cantidadLibros}`;
+    const url = `http://localhost:8081/libreria/categoria/?categoria=${categoria}&cantidadLibros=${cantidadLibros}`;
     const resp = await fetch(url);
     const data = await resp.json();
     const listaLibros = data.map(libro => ({
@@ -8,7 +8,7 @@ export const getLibrosPorCategoria = async (categoria, cantidadLibros) => {
         titulo: libro.titulo,
         autor: libro.autor,
         categoria: libro.categoria,
-        disponibilidad: libro.disponibilidad
+        disponible: libro.disponible
     }));
     return listaLibros;
 

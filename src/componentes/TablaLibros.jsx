@@ -51,7 +51,7 @@ export const TablaLibros = ({ listaLibros}) => {
                                 <td>{libro.titulo}</td>
                                 <td>{libro.autor}</td>
                                 <td>{libro.categoria}</td>
-                                <td>{libro.disponibilidad}</td>
+                                <td>{libro.disponible}</td>
                             </tr>)
                     }
                 </tbody>

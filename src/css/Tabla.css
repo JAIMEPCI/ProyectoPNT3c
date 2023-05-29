@@ -20,7 +20,7 @@
   
   /* Estilos para las filas impares */
   .table tbody tr:nth-child(odd) {
-    background-color: #bed8ff;
+    background-color: #dceaff;
   }
   
   /* Estilos para las filas pares */
@@ -85,7 +85,7 @@
   .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #3587deb7;
+    background-color: #d1e7ffb7;
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.512);
     border-radius: 4px;
     padding: 20px;

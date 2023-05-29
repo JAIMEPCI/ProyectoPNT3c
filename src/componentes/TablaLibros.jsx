@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/Tabla.css";
 
 export const TablaLibros = ({ listaLibros }) => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
@@ -58,7 +59,7 @@ export const TablaLibros = ({ listaLibros }) => {
           value={categoriaSeleccionada}
           onChange={(e) => setCategoriaSeleccionada(e.target.value)}
         >
-          <option value="">Seleccione una Categoría</option>
+          <option value="">Todas</option>
           <option value="CIENTIFICO">CIENTIFICO</option>
           <option value="LITERATURA">LITERATURA</option>
           <option value="LINGUISTICO">LINGUISTICO</option>
